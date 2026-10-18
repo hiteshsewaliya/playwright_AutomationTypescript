@@ -3,12 +3,8 @@ import { mkdir } from 'node:fs/promises';
 import path from 'node:path';
 
 const authFile = path.resolve('playwright/.auth/user.json');
-// const email = process.env.BONDARACADEMY_EMAIL;
-// const password = process.env.BONDARACADEMY_PASSWORD;
-
-
-const email = 'hsewaliya05@gmail.com';
-const password = 'Hitesh@123';
+const email = process.env.BONDARACADEMY_EMAIL;
+const password = process.env.BONDARACADEMY_PASSWORD;
 
 setup('authenticate', async ({ page }) => {
     if (!email || !password) {
