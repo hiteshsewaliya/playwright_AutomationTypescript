@@ -6,7 +6,7 @@ test.describe.configure({ mode: 'parallel' });
         await page.goto('/dashboard');
     });
 
-    test('program' ,{ tag: '@smoke'}, async ({ page }) => {
+    test('program' , async ({ page }) => {
         const programs = page.getByRole('link', { name: 'Programs', exact: true });
         await expect(programs).toBeVisible();
         await programs.click();
