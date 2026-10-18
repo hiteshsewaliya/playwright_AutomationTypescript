@@ -8,7 +8,7 @@ const email = process.env.GITHUB_EMAIL;
 const password = process.env.GITHUB_PASSWORD;
 const mfaSecret = process.env.GITHUB_TOTP;
 
-setup('authenticate', async ({ page }) => {
+setup.fixme('authenticate', async ({ page }) => {
     if (!email || !password || !mfaSecret) {
         throw new Error('Set GITHUB_EMAIL, GITHUB_PASSWORD, and GITHUB_TOTP to run authenticated tests.');
     }

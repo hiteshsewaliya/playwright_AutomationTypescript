@@ -10,7 +10,7 @@ test.describe.configure({ mode: 'parallel' });
         const programs = page.getByRole('link', { name: 'Programs', exact: true });
         await expect(programs).toBeVisible();
         await programs.click();
-        const heading = page.getByRole('heading', { name: 'Mastery Programs1.' });
+        const heading = page.getByRole('heading', { name: 'Mastery Programs.' });
         await expect(heading).toBeVisible();
     });
 
